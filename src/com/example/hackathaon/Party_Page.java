@@ -85,7 +85,7 @@ public class Party_Page extends Activity {
 				tv1.setTextSize(30);
 			} else
 				tv1.setText(sdesc.get(pos));
-			tv1.setTextColor(getResources().getColor(android.R.color.white));
+			//tv1.setTextColor(getResources().getColor(android.R.color.white));
 			// tv.setText(desc.get(pos));
 			// tv2.setText(tag.get(pos));
 			return v;

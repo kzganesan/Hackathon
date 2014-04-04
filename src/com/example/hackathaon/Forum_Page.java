@@ -127,7 +127,7 @@ public class Forum_Page extends Fragment implements OnItemClickListener {
 	}
 
 	public void parser() {
-		String url = "http://test-rkr.appspot.com";
+		String url = "http://taranveer2244.appspot.com";
 		ArrayList<NameValuePair> paramet = new ArrayList<NameValuePair>();
 		Log.d("uid", getArguments().getString("uid"));
 		paramet.add(new BasicNameValuePair("uid", getArguments().getString("uid")));

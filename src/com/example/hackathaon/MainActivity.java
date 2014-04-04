@@ -85,19 +85,14 @@ public class MainActivity extends Fragment implements OnItemSelectedListener,
 				// TODO Auto-generated method stub
 				networkcheck();
 				if (connflag == 1) {
-					startActivity(new Intent(getActivity(), Maps_Test.class));
+					startActivityForResult(new Intent(getActivity(),
+							Maps_Test.class), 1);
 				} else {
 					Toast.makeText(getActivity(), "CHECK NETWORK CONNECTION",
 							Toast.LENGTH_LONG).show();
 				}
 			}
 		});
-		if (getActivity().getIntent().getStringExtra("loc") != null) {
-			loc = getActivity().getIntent().getStringExtra("loc");
-			lati = getActivity().getIntent().getDoubleExtra("lati", 0);
-			longi = getActivity().getIntent().getDoubleExtra("longi", 0);
-		}
-
 		return v;
 	}
 
@@ -219,4 +214,19 @@ public class MainActivity extends Fragment implements OnItemSelectedListener,
 		}
 
 	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == getActivity().RESULT_OK) {
+			if (requestCode == 1) {
+
+				loc = data.getStringExtra("loc");
+				lati = data.getDoubleExtra("lati", 0);
+				longi = data.getDoubleExtra("longi", 0);
+			}
+		}
+	}
+
 }

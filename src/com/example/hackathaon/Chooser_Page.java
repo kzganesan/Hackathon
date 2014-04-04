@@ -86,7 +86,7 @@ public class Chooser_Page extends ActionBarActivity {
 				}
 			}
 		});
-	    getSupportFragmentManager().beginTransaction().replace(R.id.cp_frame, new Public_Forum()).commit();
+	    //getSupportFragmentManager().beginTransaction().replace(R.id.cp_frame, new Public_Forum()).commit();
 	}
 
 	@Override

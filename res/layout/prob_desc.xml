@@ -11,8 +11,23 @@
     <TextView
         android:id="@+id/tvprobdesc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:textSize="20sp">
+        android:layout_height="wrap_content"
+        android:textSize="20sp" >
     </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Rate This Problem:"
+        android:textSize="25sp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <RatingBar
+        android:id="@+id/rbprob_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5" />
 
 </LinearLayout>

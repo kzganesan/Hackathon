@@ -43,20 +43,19 @@ public class Maps_Test extends FragmentActivity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(Maps_Test.this, MainActivity.class)
-						.putExtra("loc", tv.getText().toString())
-						.putExtra("lati", lati)
-						.putExtra("longi", longi)
-						.addFlags(
-								Intent.FLAG_ACTIVITY_CLEAR_TASK
-										| Intent.FLAG_ACTIVITY_NEW_TASK));
+				setResult(RESULT_OK,
+						new Intent(Maps_Test.this, MainActivity.class)
+								.putExtra("loc", tv.getText().toString())
+								.putExtra("lati", lati)
+								.putExtra("longi", longi));
+				finish();
 			}
 		});
 		map = ((SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map)).getMap();
 		map.setMyLocationEnabled(true);
 		map.setBuildingsEnabled(true);
-		//map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+		// map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 		if (map == null)
 			Toast.makeText(this, "Google Maps not available", Toast.LENGTH_LONG)
 					.show();
